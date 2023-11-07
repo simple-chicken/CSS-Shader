@@ -29,6 +29,7 @@
     "@typescript-eslint/parser": "^6.10.0",
     "babel-loader": "^9.1.3",
     "css-loader": "^6.8.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.8.0",
     "eslint-plugin-react": "^7.27.1",
     "html-webpack-plugin": "^5.5.3",
@@ -49,5 +50,10 @@
     "mini-css-extract-plugin": "^2.7.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
