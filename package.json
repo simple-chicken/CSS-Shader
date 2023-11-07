@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --mode development ",
-    "lint": "eslint --fix './src/**/*{.tsx,.js}'"
+    "lint": "eslint --fix './src/**/*{.tsx,.js}'",
+    "commit": "git-cz"
   },
   "repository": {
     "type": "git",
