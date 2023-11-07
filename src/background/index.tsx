@@ -8,5 +8,5 @@ export default function Background() {
       <CssBackground />
       <ShaderBackground />
     </>
-  )
+  );
 }
