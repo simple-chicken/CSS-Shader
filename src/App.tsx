@@ -1,7 +1,10 @@
 import React from "react"
+import Background from "./background"
 
 export default function App() {
   return (
-    <h1>你爹</h1>
+    <>
+      <Background />
+    </>
   )
 }

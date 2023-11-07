@@ -57,21 +57,22 @@ const getConfig = (env: Environment): Configuration => {
           ],
         },
         {
-          test: /\.module\.css$/,
+          test: /\.scss$/,
           use: [
-            MiniCssExtractPlugin.loader,
-            {
-              loader: 'css-loader',
-              options: {
-                modules: true,
-              },
-            },
+            'style-loader',
+            'css-loader',
+            'sass-loader',
           ],
         },
         {
-          test: /\.css$/,
-          exclude: /\.module\.css$/,
-          use: [MiniCssExtractPlugin.loader, 'css-loader'],
+          test: /\.less$/,
+          use: [
+            'style-loader',
+            'css-loader',
+            {
+              loader: "less-loader",
+            }
+          ],
         },
       ],
     },
@@ -87,11 +88,10 @@ const getConfig = (env: Environment): Configuration => {
     ],
 
     devServer: {
-      static: path.join(__dirname, 'build'),
+      static: path.join(__dirname, 'public'),
       compress: true,
       historyApiFallback: true,
       port: 3000,
-      open: true,
     } as DevServerConfiguration,
   };
 
