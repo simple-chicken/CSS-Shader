@@ -1,36 +1,49 @@
 {
-    // "editor.formatOnSave": false,
-    "html.format.wrapLineLength": 100000000,
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact"
-    ],
-    // "vetur.format.defaultFormatter.html": "prettyhtml",
-    // "vetur.format.defaultFormatter.css": "prettier",
-    // "vetur.format.defaultFormatter.postcss": "prettier",
-    // "vetur.format.defaultFormatter.scss": "prettier",
-    // "vetur.format.defaultFormatter.less": "prettier",
-    // "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
-    // "vetur.format.defaultFormatter.js": "prettier",
-    // "vetur.format.defaultFormatter.ts": "prettier",
-    // "vetur.format.defaultFormatter.sass": "sass-formatter",
-    // "vetur.format.defaultFormatterOptions": {
-    //     "prettyhtml": {
-    //         "sortAttributes": false,
-    //         "wrapAttributes": false,
-    //         "usePrettier": false
-    //     }
-    // },
-    "eslint.workingDirectories": [
-        "./"
-    ],
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "scss.validate": true,
-    "css.validate": true,
-    "scss.lint.unknownAtRules": "ignore",
-    "css.lint.unknownAtRules": "ignore"
+  "eslint.enable": true,
+  "editor.formatOnSave": true,
+  "html.format.wrapLineLength": 100000000,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  // "vetur.format.defaultFormatter.html": "prettyhtml",
+  // "vetur.format.defaultFormatter.css": "prettier",
+  // "vetur.format.defaultFormatter.postcss": "prettier",
+  // "vetur.format.defaultFormatter.scss": "prettier",
+  // "vetur.format.defaultFormatter.less": "prettier",
+  // "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+  // "vetur.format.defaultFormatter.js": "prettier",
+  // "vetur.format.defaultFormatter.ts": "prettier",
+  // "vetur.format.defaultFormatter.sass": "sass-formatter",
+  // "vetur.format.defaultFormatterOptions": {
+  //     "prettyhtml": {
+  //         "sortAttributes": false,
+  //         "wrapAttributes": false,
+  //         "usePrettier": false
+  //     }
+  // },
+  /*默认的代码格式化工具*/
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  //针对共用的语言如JS、TS和JSX关闭文件保存自动格式化功能，通过eslint来做这件事
+  //   "[javascript]": {
+  //     "editor.formatOnSave": false
+  //   },
+  //   "[javascriptreact]": {
+  //     "editor.formatOnSave": false
+  //   },
+  //   "[typescript]": {
+  //     "editor.formatOnSave": false
+  //   },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+
+  "prettier.requireConfig": true,
+  "eslint.workingDirectories": ["./"],
+  "scss.validate": true,
+  "css.validate": true,
+  "scss.lint.unknownAtRules": "ignore",
+  "css.lint.unknownAtRules": "ignore"
 }

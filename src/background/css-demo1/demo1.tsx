@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react'
 
-import "./index.scss";
+import './index.scss'
+
 // import './index.less';
 
 export default function CssBackground() {
@@ -15,5 +16,5 @@ export default function CssBackground() {
         <li>Button</li>
       </ul>
     </div>
-  );
+  )
 }

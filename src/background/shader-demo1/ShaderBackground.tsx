@@ -1,8 +1,5 @@
-import React from "react";
+import React from 'react'
+
 export default function Shaderackground() {
-  return (
-    <div>
-      shader
-    </div>
-  );
+  return <div>shader</div>
 }
