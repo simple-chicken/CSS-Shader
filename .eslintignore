@@ -1,0 +1,5 @@
+/release/
+/pack/
+/node_modules/
+/*.js
+/src/kit/

@@ -21,7 +21,8 @@
     "noUnusedParameters": true
   },
   "include": [
-    "./src/**/*"
+    "./src/**/*",
+    "webpack.config.ts"
   ],
   "exclude": [
     "./node_modules"

@@ -1,15 +1,15 @@
-import path from 'path';
-import { Configuration } from 'webpack';
-import { Configuration as DevServerConfiguration } from 'webpack-dev-server';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+import path from 'path'
+import { type Configuration } from 'webpack'
+import { type Configuration as DevServerConfiguration } from 'webpack-dev-server'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 interface Environment {
-  development: boolean;
-  production: boolean;
+  development: boolean
+  production: boolean
 }
 
-const isDevelopment = (env: Environment) => env.development;
+const isDevelopment = (env: Environment) => env.development
 
 const getConfig = (env: Environment): Configuration => {
   const config: Configuration = {
@@ -21,11 +21,11 @@ const getConfig = (env: Environment): Configuration => {
     output: {
       path: path.join(__dirname, 'build'),
       filename: isDevelopment(env) ? '[name].js' : '[name].[chunkhash].js',
-      clean: true,
+      clean: true
     },
 
     resolve: {
-      extensions: ['.tsx', '.ts', '.js'],
+      extensions: ['.tsx', '.ts', '.js']
     },
 
     module: {
@@ -40,29 +40,29 @@ const getConfig = (env: Environment): Configuration => {
                 [
                   '@babel/preset-env',
                   {
-                    targets: 'last 2 versions, > 1%, not dead',
-                  },
+                    targets: 'last 2 versions, > 1%, not dead'
+                  }
                 ],
-                '@babel/preset-react',
-              ],
-            },
+                '@babel/preset-react'
+              ]
+            }
           },
           {
             loader: 'ts-loader',
             options: {
               transpileOnly: true,
-              experimentalWatchApi: true,
-            },
+              experimentalWatchApi: true
+            }
           }
-          ],
+          ]
         },
         {
           test: /\.scss$/,
           use: [
             'style-loader',
             'css-loader',
-            'sass-loader',
-          ],
+            'sass-loader'
+          ]
         },
         {
           test: /\.less$/,
@@ -70,32 +70,32 @@ const getConfig = (env: Environment): Configuration => {
             'style-loader',
             'css-loader',
             {
-              loader: "less-loader",
+              loader: 'less-loader'
             }
-          ],
-        },
-      ],
+          ]
+        }
+      ]
     },
 
     plugins: [
       new MiniCssExtractPlugin({
-        filename: '[name].[contenthash].css',
+        filename: '[name].[contenthash].css'
       }),
 
       new HtmlWebpackPlugin({
-        template: path.join(__dirname, 'public', 'index.html'),
-      }),
+        template: path.join(__dirname, 'public', 'index.html')
+      })
     ],
 
     devServer: {
       static: path.join(__dirname, 'public'),
       compress: true,
       historyApiFallback: true,
-      port: 3000,
-    } as DevServerConfiguration,
-  };
+      port: 3000
+    } satisfies DevServerConfiguration
+  }
 
-  return config;
-};
+  return config
+}
 
-export default getConfig;
+export default getConfig
