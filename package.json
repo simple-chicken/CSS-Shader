@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --mode development ",
     "lint": "eslint --fix './src/**/*{.tsx,.js}'",
-    "commit": "git-cz",
     "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{js,ts,css,scss,html,tsx}\" --write",
     "prepare": "husky install",
     "lint-staged": {
