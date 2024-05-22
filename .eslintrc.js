@@ -84,6 +84,8 @@ module.exports = {
         before: true,
         after: true
       }
-    ]
+    ],
+    'consistent-return': 0,
+    'max-len': 0
   }
 }
